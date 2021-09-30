@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "coinbase-pro-node": "^3.0.8"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "name": "coinbase-pro-trading-bot",
+  "description": "Generic Trading bot for testing algorithms on the Coinbase Pro exchange.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eriklacourt/coinbase-pro-trading-bot.git"
+  },
+  "author": "eriklacourt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eriklacourt/coinbase-pro-trading-bot/issues"
+  },
+  "homepage": "https://github.com/eriklacourt/coinbase-pro-trading-bot#readme"
+}
