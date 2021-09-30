@@ -1,5 +1,9 @@
 {
   "dependencies": {
     "coinbase-pro-node": "^3.0.8"
-  }
+  },
+  "scripts": {
+    "start": "node your-script.js"
+}
+
 }
