@@ -3,7 +3,7 @@
     "coinbase-pro-node": "^3.0.8"
   },
   "scripts": {
-    "start": "index.js"
+    "start": "node index.js"
 }
 
 }
