@@ -13,7 +13,21 @@ const auth = {
 
 const client = new CoinbasePro(auth);
 
-client.rest.account.listAccounts().then(accounts => {
-    const message = `You can trade "${accounts.length}" different pairs.`;
-    console.log(message);
-});
+const channel = {
+    name: WebSocketChannelName.USER,
+    product_ids: ['BTC-USD'],
+  };
+  
+  client.ws.on(WebSocketEvent.ON_MESSAGE, message => {
+    console.info(`Received message of type "${message.type}".`, message);
+  });
+  
+  client.ws.on(WebSocketEvent.ON_MESSAGE_ERROR, errorMessage => {
+    throw new Error(`${errorMessage.message}: ${errorMessage.reason}`);
+  });
+  
+  client.ws.on(WebSocketEvent.ON_OPEN, () => {
+    client.ws.subscribe(channel);
+  });
+  
+  client.ws.connect();
